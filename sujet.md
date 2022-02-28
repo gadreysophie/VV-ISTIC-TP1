@@ -93,6 +93,15 @@ Azure is using this system already as long as Netflix.
 
 These experiments could be carried out on all streaming platforms like Disney+ or Prime Video that demand continuous availability. 
 
+### 4. WebAssembly
 
+#### Read the paper and explain what are the main advantages of having a formal specification for WebAssembly. 
+
+WebAssembly is safe, fast, portable and compact. It is the first solution for low level code on the web that delivers those capacities and services. It works on all browsers.
+WebAssembly is a binary code format. 
+
+#### In your opinion, does this mean that WebAssembly implementations should not be tested?
+
+WebAssembly implementations should be tested.
 
 
