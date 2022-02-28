@@ -12,6 +12,23 @@
 
 ## Answers
 
+### 1. BUG
+
+#### Describe the bug. 
+Example of the bug of the 2038 year. It is similar to the bug of the 2000 year. It is linked to the POSIX system
+
+#### If possible, say whether the bug is local or global and describe the failure that manifested its presence. 
+This bug is global for all system under POSIX
+
+#### Explain the repercussions of the bug for clients/consumers and the company or entity behind the faulty program. 
+
+On the 19th of January in 2038, 3 h 14 min 8 s, all systems will display the date of the 13th december in 1901, 20 h 45 min 52 s
+
+#### Speculate whether, in your opinion, testing the right scenario would have helped to discover the fault.
+
+There is no solution for 32bits systems. The prefered way is to pass on a 64bits system.
+
+
 
 ### 3. Netflix
 
