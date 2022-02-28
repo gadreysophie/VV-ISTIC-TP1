@@ -11,3 +11,53 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
+
+
+### 3. Netflix
+
+#### What are the concrete experiments they perform? 
+
+- Chaos Monkey: the principle is to select randomly a virtual machine instance and terminate it. Is is to prevent failures of VM instances. It is running only during working hours so that there is a good response delay -> run during weekdays
+- Chaos Kong: the principle is to simulate the failure of a entire server on a region in the world -> run once a month
+
+One of the principle of chaos engineering is to vary real word events.
+
+The experiments that are designed focus on the availability of Netflix.
+
+#### What are the requirements for these experiments? 
+
+All tests, with the chaos engineering process, target the control plane of Netflix.
+In the study, authors define the Chaos Engineering approach to designing experiments. There are 4 points to consider:
+- build a hypothesis around steady state behavior
+- vary real word events
+- run experiments in production
+- automate this experiments to run continuously.
+
+
+
+#### What are the variables they observe and what are the main results they obtained? 
+
+Variables that are observed are:
+- SPS: stream/starts per second, it is a great metric to characterize the steady state behavior. If there is an outage on a region, all requests are redirect on an healthy region;
+- the use of historical data
+
+The authors give some inputs they use in their experiments : 
+- terminate virtual machine instances (chaos monkey)
+- inject latency into requests between services
+- fail requests between services
+- fail an internal service
+- make an entire Amazon region unavailable (choas Kong)
+Most of the time, the error is simulated, for example in the case of the chaos kong.
+
+Netflix use fallbacks to ensure graceful degradation.
+
+#### Is Netflix the only company performing these experiments? Speculate how these experiments could be carried in other organizations in terms of the kind of experiment that could be performed and the system variables to observe during the experiments.
+
+Netflix runs thanks to a distributed system because it is not possible to use one single server.
+Azure is using this system already as long as Netflix.
+
+These experiments could be carried out on all streaming platforms like Disney+ or Prime Video that demand continuous availability. 
+
+
+
+
