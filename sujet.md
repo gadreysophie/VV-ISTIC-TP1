@@ -28,7 +28,25 @@ On the 19th of January in 2038, 3 h 14 min 8 s, all systems will display the dat
 
 There is no solution for 32bits systems. The prefered way is to pass on a 64bits system.
 
+### 2. Apache
 
+#### Among those issues find one that corresponds to a bug that has been solved. 
+
+I choose this bug:
+![](https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-734?filter=doneissues)
+
+Encountered an IllegalStateException while traversing with Flat3Map.entrySet()
+
+#### Classify the bug as local or global. 
+It is a local bug on the entrySet() function.
+
+#### Explain the bug and the solution. 
+
+There is a problem with the EntryIterator.remove() method in the Flat3Map java class
+
+#### Did the contributors of the project add new tests to ensure that the bug is detected if it reappears in the future?
+
+I don't see tests to ensure the bug won't reappear. It was only a fix that have been done.
 
 ### 3. Netflix
 
