@@ -97,8 +97,21 @@ These experiments could be carried out on all streaming platforms like Disney+ o
 
 #### Read the paper and explain what are the main advantages of having a formal specification for WebAssembly. 
 
-WebAssembly is safe, fast, portable and compact. It is the first solution for low level code on the web that delivers those capacities and services. It works on all browsers.
-WebAssembly is a binary code format. 
+WebAssembly is safe, fast, portable and compact. It is the first solution for low level code on the web that delivers those capacities and services. 
+It works on all browsers. It is langage, hardware and platform independent.
+WebAssembly is a binary code format.
+
+There are 7 concepts that are used in the WebAssembly langage:
+- Modules, it is a binary and it contains definitions for functions, globals, tables, and memories.
+- Functions, it is used to organize the code in modules
+- Instructions, it is based on stack machine and sequence of instructions.
+- Traps, it is a failure of the current computation which throws a JavaScript exception.
+- Machine Types, it is linked to the absract syntax of the WebAssembly langage.
+- Local variables of functions
+- Global variables of functions
+
+WebAssembly uses a linear memory for the storage.
+
 
 #### In your opinion, does this mean that WebAssembly implementations should not be tested?
 
