@@ -117,5 +117,24 @@ WebAssembly uses a linear memory for the storage.
 
 WebAssembly implementations should be tested.
 
-### 5. WebAssembly using Isabelle
+### 5. WebAssembly using Isabelle### 5. WebAssembly using Isabelle
 
+#### According to the author of this second paper, what are the main advantages of the mechanized specification? 
+
+The main advantages are to preserve eyeball closeness. The model has full support for loops with non-empty arguments. The model uses Isabelle’s locale mechanism to abstract the implementation of arithmetic and the heap as parameters. 
+
+
+#### Did it help improving the original formal specification of the language? 
+
+
+
+#### What other artifacts were derived from this mechanized specification? 
+
+An executable type checker was created using Isabelle.  
+
+
+#### How did the author verify the specification? 
+
+#### Does this new specification removes the need for testing?
+
+Before the article, no proof of soundness has been made. With this proof, some errors were detected.
